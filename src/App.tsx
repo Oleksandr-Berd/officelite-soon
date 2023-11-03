@@ -1,15 +1,18 @@
-import { Routes } from 'react-router-dom';
-import './App.css';
-import SharedLayout from './layouts/SharedLayout/SharedLayout';
+import { lazy } from "react";
+import { Route, Routes } from "react-router-dom";
+
+import SharedLayout from "./layouts/SharedLayout/SharedLayout";
+
+const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
 
 function App() {
   return (
     <>
-    <SharedLayout>
-      <Routes>
-        
-      </Routes>
-    </SharedLayout>
+      <SharedLayout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </SharedLayout>
     </>
   );
 }
