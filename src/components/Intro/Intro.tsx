@@ -15,7 +15,7 @@ const Intro: React.FC = () => {
         projects. Officelite is the new collaboration platform built with an
         intuitive interface to improve productivity.
       </SC.Content>
-      <ButtonLink/>
+      <ButtonLink location="intro" color="blue"/>
     </SC.CommonContainer>
   );
 };

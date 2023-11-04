@@ -1,60 +1,65 @@
+
+import * as SC from "./PropoSitionStyled"
+
 import ButtonLink from "../../ui/ButtonLink/ButtonLink";
+
+import bg from "../../assets/images/item_bg_mob.svg"
 
 const Proposition:React.FC = () => {
     return (
-      <ul>
-        <li>
-          <h3>Basic</h3>
-          <h2>Free</h2>
-          <p>Up to 5 users for free</p>
-          <ul>
-            <li>
+      <SC.List>
+        <SC.Item color="white">
+          <SC.Package>Basic</SC.Package>
+          <SC.Price>Free</SC.Price>
+          <SC.UserProposal>Up to 5 users for free</SC.UserProposal>
+          <SC.SubList color="white">
+            <SC.SubItem>
               <p>Basic document collaboration</p>
-            </li>
-            <li>
+            </SC.SubItem>
+            <SC.SubItem>
               <p>2 GB storage</p>
-            </li>
-            <li>
+            </SC.SubItem>
+            <SC.SubItem>
               <p>Great security and support</p>
-            </li>
-          </ul>
-          <ButtonLink />
-        </li>
-        <li>
-          <h3>Pro</h3>
-          <h2>$9.99</h2>
-          <p>All essential integrations</p>
-          <ul>
-            <li>
+            </SC.SubItem>
+          </SC.SubList>
+          <ButtonLink location="proposal" color="grey" />
+        </SC.Item>
+        <SC.Item color="blue" bg={bg}>
+          <SC.Package>Pro</SC.Package>
+          <SC.Price>$9.99</SC.Price>
+          <SC.UserProposal>All essential integrations</SC.UserProposal>
+          <SC.SubList color="blue">
+            <SC.SubItem>
+              <p>All essential integrations</p>
+            </SC.SubItem>
+            <SC.SubItem>
               <p>50 GB storage</p>
-            </li>
-            <li>
+            </SC.SubItem>
+            <SC.SubItem>
               <p>More control and insights</p>
-            </li>
-            <li>
-              <p></p>
-            </li>
-          </ul>
-          <ButtonLink />
-        </li>
-        <li>
-          <h3>Ultimate</h3>
-          <h2>$19.99</h2>
-          <p>Per user, billed monthly</p>
-          <ul>
-            <li>
+            </SC.SubItem>
+          </SC.SubList>
+          <ButtonLink location="proposal" color="white" />
+        </SC.Item>
+        <SC.Item color="white">
+          <SC.Package>Ultimate</SC.Package>
+          <SC.Price>$19.99</SC.Price>
+          <SC.UserProposal>Per user, billed monthly</SC.UserProposal>
+          <SC.SubList color="white">
+            <SC.SubItem>
               <p>Robust work management</p>
-            </li>
-            <li>
+            </SC.SubItem>
+            <SC.SubItem>
               <p>100 GB storage</p>
-            </li>
-            <li>
+            </SC.SubItem>
+            <SC.SubItem>
               <p>VIP support</p>
-            </li>
-          </ul>
-          <ButtonLink />
-        </li>
-      </ul>
+            </SC.SubItem>
+          </SC.SubList>
+          <ButtonLink location="proposal" color="grey" />
+        </SC.Item>
+      </SC.List>
     );
 }
  

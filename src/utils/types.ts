@@ -3,5 +3,11 @@ export type Props ={
 }
 
 export type StyleProps = {
-    bg:string;
+    color?:string;
+    bg?: string;
+}
+
+export type LinkButtonProps = {
+    location: "intro" | "proposal";
+    color: string;
 }

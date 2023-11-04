@@ -1,8 +1,11 @@
 import * as SC from "./ButtonLinkStyled"
 
-const ButtonLink:React.FC = () => {
+import { LinkButtonProps } from "../../utils/types";
+
+
+const ButtonLink:React.FC<LinkButtonProps> = ({location, color}) => {
     return (
-      <SC.Wrapper>
+      <SC.Wrapper location={location} color={color}>
         <a href="/sing">Get Started</a>
       </SC.Wrapper>
     );

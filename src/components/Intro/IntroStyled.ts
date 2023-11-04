@@ -3,7 +3,6 @@ import styled from "@emotion/styled";
 export const CommonContainer = styled.div`
   padding-left: 24px;
   padding-right: 24px;
-  padding-bottom: 100px;
 
   text-align: center;
 `;
