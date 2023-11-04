@@ -18,3 +18,13 @@ export const Title = styled.h1`
   font-size: 40px;
   line-height: 1.2;
 `;
+
+
+export const Content = styled.p`
+  margin-bottom: 24px;
+
+  color: #747b95;
+  font-family: "KumbhRegular";
+  font-size: 16px;
+  line-height: 1.63;
+`;

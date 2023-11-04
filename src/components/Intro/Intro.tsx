@@ -1,6 +1,7 @@
 import * as SC from "./IntroStyled";
 
 import {ReactComponent as IntroBoard} from "../../assets/images/intro_board.svg"
+import ButtonLink from "../../ui/ButtonLink/ButtonLink";
 
 const Intro: React.FC = () => {
   return (
@@ -9,14 +10,12 @@ const Intro: React.FC = () => {
         <IntroBoard />
       </SC.ImageGeneralCon>
       <SC.Title>A simple solution to complex tasks is coming soon</SC.Title>
-      <p>
+      <SC.Content>
         Say goodbye to inefficient juggling of multiple apps, teams, and
         projects. Officelite is the new collaboration platform built with an
         intuitive interface to improve productivity.
-      </p>
-      <div>
-        <a href="/sing">Get Started</a>
-      </div>
+      </SC.Content>
+      <ButtonLink/>
     </SC.CommonContainer>
   );
 };
