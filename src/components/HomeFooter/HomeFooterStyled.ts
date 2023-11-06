@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
+import { StyleProps } from "../../utils/types";
 
-export const FooterStyled = styled.footer`
+export const FooterStyled = styled.footer<StyleProps>`
   padding-top: 100px;
   padding-bottom: 100px;
   padding-left: 23px;
@@ -9,6 +10,10 @@ export const FooterStyled = styled.footer`
   text-align: center;
 
   background-color: #25293a;
+
+  background-image: url(${(props) => props.bg});
+  background-repeat: no-repeat;
+  background-position: bottom;
 `;
 
 export const Title = styled.h3`

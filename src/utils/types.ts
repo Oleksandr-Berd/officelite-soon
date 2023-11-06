@@ -11,3 +11,7 @@ export type LinkButtonProps = {
     location: "intro" | "proposal";
     color: string;
 }
+
+export type CounterProps = {
+  location: "home" | "sign";
+};

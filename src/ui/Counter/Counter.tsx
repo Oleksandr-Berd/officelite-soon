@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 
 import * as SC from "./CounterStyled"
+import { CounterProps } from "../../utils/types";
 
-const Counter:React.FC = () => {
+const Counter:React.FC<CounterProps> = ({location}) => {
 const targetDate = new Date("November 4, 2024 00:00:00").getTime();
 const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
@@ -42,25 +43,30 @@ function calculateTimeLeft() {
 
  
     return (
-    <SC.List>
-      <SC.Item>
-        <SC.Number>{timeLeft.days}</SC.Number>
-        <SC.Title>days</SC.Title>
-      </SC.Item>
-      <SC.Item>
-        <SC.Number>{timeLeft.hours} </SC.Number>
-        <SC.Title>hours</SC.Title>
-      </SC.Item>
-      <SC.Item>
-        <SC.Number>{timeLeft.minutes}</SC.Number>
-        <SC.Title>min</SC.Title>
-      </SC.Item>
-      <SC.Item>
-        <SC.Number>{timeLeft.seconds}</SC.Number>
-        <SC.Title>sec</SC.Title>
-      </SC.Item>
-    </SC.List>
-  );
+      <SC.CommonWrapper>
+        <SC.MainTitle location={location}>
+          coming <span>4 nov 2024</span>
+        </SC.MainTitle>
+        <SC.List>
+          <SC.Item location={location}>
+            <SC.Number location={location}>{timeLeft.days}</SC.Number>
+            <SC.Title location={location}>days</SC.Title>
+          </SC.Item>
+          <SC.Item location={location}>
+            <SC.Number location={location}>{timeLeft.hours} </SC.Number>
+            <SC.Title location={location}>hours</SC.Title>
+          </SC.Item>
+          <SC.Item location={location}>
+            <SC.Number location={location}>{timeLeft.minutes}</SC.Number>
+            <SC.Title location={location}>min</SC.Title>
+          </SC.Item>
+          <SC.Item location={location}>
+            <SC.Number location={location}>{timeLeft.seconds}</SC.Number>
+            <SC.Title location={location}>sec</SC.Title>
+          </SC.Item>
+        </SC.List>
+      </SC.CommonWrapper>
+    );
 }
  
 export default Counter;
