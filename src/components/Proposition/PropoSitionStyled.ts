@@ -3,7 +3,6 @@ import { StyleProps } from "../../utils/types";
 
 export const List = styled.ul`
 padding-top: 100px;
-  padding-bottom: 100px;
   padding-left: 23px;
   padding-right: 25px;
 
