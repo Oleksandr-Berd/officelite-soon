@@ -1,4 +1,4 @@
-import { ChangeEvent, EventHandler } from "react";
+import { ChangeEvent } from "react";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import { ToastContainer, toast } from "react-toastify";

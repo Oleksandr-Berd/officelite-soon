@@ -13,4 +13,8 @@ export const LogoStyled = styled.div`
     font-family: "KumbhBold";
     font-size: 18px;
   }
+
+  @media (min-width: 768px){
+    justify-content: flex-start;
+  }
 `;

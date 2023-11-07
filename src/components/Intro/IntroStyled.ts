@@ -5,17 +5,34 @@ export const CommonContainer = styled.div`
   padding-right: 24px;
 
   text-align: center;
+
+@media (min-width: 768px){
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding-left: 39px;
+  padding-right: 40px;
+}
 `;
 
-export const ImageGeneralCon = styled.div``;
+export const ContentWrapper = styled.div`
+
+margin-right: 36px;
+
+text-align: left;
+`
 
 export const Title = styled.h1`
+
   margin-bottom: 24px;
 
   color: #333950;
   font-family: "KumbhBold";
   font-size: 40px;
   line-height: 1.2;
+
+
 `;
 
 
@@ -26,4 +43,8 @@ export const Content = styled.p`
   font-family: "KumbhRegular";
   font-size: 16px;
   line-height: 1.63;
+
+  @media (min-width: 768px){
+    width: 345px;
+  }
 `;

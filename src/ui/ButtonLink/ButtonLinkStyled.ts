@@ -18,6 +18,7 @@ export const Wrapper = styled.div<LinkButtonProps>`
 
   border: none;
   border-radius: 28px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
   & > a {
     color: ${(props) => (props.location === "intro" ? "#fff" : "#5175FF")};
