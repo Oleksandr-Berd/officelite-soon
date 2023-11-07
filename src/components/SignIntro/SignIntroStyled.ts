@@ -6,6 +6,13 @@ export const CommonWrapper = styled.div`
   padding-right: 24px;
 
   text-align: center;
+
+  @media (min-width: 768px){
+    padding-bottom: 45px;
+    padding-left: 97px;
+    padding-right: 98px;
+
+  }
 `;
 
 export const Title = styled.h2`
@@ -15,6 +22,10 @@ export const Title = styled.h2`
   font-family: "KumbhBold";
   font-size: 40px;
   line-height: 1.2;
+
+  @media (min-width: 768px){
+    margin-bottom: 24px;
+  }
 `;
 
 export const Content = styled.p`

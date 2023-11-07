@@ -34,7 +34,7 @@ export const List = styled.ul<CounterProps>`
   margin-bottom: ${(props) => (props.location === "home" ? "40px" : "64px")};
 
   @media (min-width: 768px) {
-    margin-bottom: ${(props) => (props.location === "home" ? "48px" : "64px")};
+    margin-bottom: ${(props) => (props.location === "home" ? "48px" : "104px")};
   }
 `;
 
@@ -57,6 +57,9 @@ export const Item = styled.li<CounterProps>`
 
   @media (min-width: 768px){
     width: 100px;
+
+    padding-top: 29px;
+    padding-bottom: 16px;
   }
 `;
 
