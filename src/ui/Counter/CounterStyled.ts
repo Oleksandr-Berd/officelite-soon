@@ -19,6 +19,10 @@ export const MainTitle = styled.h3<CounterProps>`
   & > span {
     color: #5175ff;
   }
+
+  @media (min-width: 768px){
+    margin-bottom: 8px;
+  }
 `;
 
 export const List = styled.ul<CounterProps>`
@@ -27,7 +31,11 @@ export const List = styled.ul<CounterProps>`
   align-items: center;
   justify-content: center;
 
-  margin-bottom: ${props => props.location === "home" ? "40px" : "64px"};
+  margin-bottom: ${(props) => (props.location === "home" ? "40px" : "64px")};
+
+  @media (min-width: 768px) {
+    margin-bottom: ${(props) => (props.location === "home" ? "48px" : "64px")};
+  }
 `;
 
 export const Item = styled.li<CounterProps>`
@@ -46,6 +54,10 @@ export const Item = styled.li<CounterProps>`
   &:not(:last-child) {
     margin-right: 13px;
   }
+
+  @media (min-width: 768px){
+    width: 100px;
+  }
 `;
 
 export const Number = styled.p<CounterProps>`
@@ -54,6 +66,11 @@ export const Number = styled.p<CounterProps>`
   font-family: "KumbhBold";
   font-size: 32px;
   line-height: 1.5;
+
+  @media (min-width: 768px){
+    font-size: 56px;
+    line-height: 0%.86;
+  }
 `;
 
 export const Title = styled.p<CounterProps>`
@@ -61,4 +78,9 @@ export const Title = styled.p<CounterProps>`
   font-family: "KumbhBold";
   font-size: 12px;
   line-height: 2.33;
+
+  @media (min-width: 768px){
+    font-size: 16px;
+    line-height: 1.75;
+  }
 `;
