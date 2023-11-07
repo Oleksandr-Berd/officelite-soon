@@ -15,3 +15,7 @@ export type LinkButtonProps = {
 export type CounterProps = {
   location: "home" | "sign";
 };
+
+export type InputProps = {
+  isError: "error" | null;
+};

@@ -47,7 +47,7 @@ function calculateTimeLeft() {
         <SC.MainTitle location={location}>
           coming <span>4 nov 2024</span>
         </SC.MainTitle>
-        <SC.List>
+        <SC.List location={location}>
           <SC.Item location={location}>
             <SC.Number location={location}>{timeLeft.days}</SC.Number>
             <SC.Title location={location}>days</SC.Title>

@@ -21,13 +21,13 @@ export const MainTitle = styled.h3<CounterProps>`
   }
 `;
 
-export const List = styled.ul`
+export const List = styled.ul<CounterProps>`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 
-  margin-bottom: 40px;
+  margin-bottom: ${props => props.location === "home" ? "40px" : "64px"};
 `;
 
 export const Item = styled.li<CounterProps>`
