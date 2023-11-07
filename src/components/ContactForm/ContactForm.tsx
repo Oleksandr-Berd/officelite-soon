@@ -7,9 +7,13 @@ import * as SC from "./ContactFormStyled";
 
 import { ReactComponent as ErrorIcon } from "../../assets/images/errorIcon.svg";
 import oval_mob from "../../assets/images/contactFormOval.svg"
+import oval_tab from "../../assets/images/oval_tab.svg"
 import {ReactComponent as ArrowMob} from "../../assets/images/arrow_mob.svg"
+import { useMediaQuery } from "usehooks-ts";
 
 const ContactForm: React.FC = () => {
+
+const isTablet = useMediaQuery("(min-width:768px)")
 
   const validationSchema = Yup.object().shape({
     userName: Yup.string().required("The Name field is empty"),
@@ -74,7 +78,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <SC.CommonWrapper bg={oval_mob}>
+    <SC.CommonWrapper bg={isTablet ? oval_tab : oval_mob}>
       <ToastContainer />
       <SC.FormStyled onSubmit={handleSubmit}>
         <SC.InputWrapper>

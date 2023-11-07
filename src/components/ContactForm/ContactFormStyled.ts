@@ -10,6 +10,12 @@ export const CommonWrapper = styled.div<StyleProps>`
 
   background: linear-gradient(to bottom, #f2f2f2 50%, #25293a 50%);
 
+  @media (min-width: 768px){
+    padding-bottom: 126px;
+    padding-left: 161px;
+    padding-right: 162px;
+  }
+
   &::after {
     position: absolute;
     bottom: 0;
