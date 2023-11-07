@@ -20,8 +20,8 @@ export const CommonWrapper = styled.div<StyleProps>`
 `;
 
 export const FormStyled = styled.form`
-position: relative;
-z-index: 5;
+  position: relative;
+  z-index: 5;
 
   display: flex;
   flex-direction: column;
@@ -89,12 +89,29 @@ export const InputStyled = styled.input<InputProps>`
   }
 `;
 
-
-export const SelectStyled = styled.select`
-  padding-bottom: 16px;
-  padding-left: 12px;
+export const SelectWrapper = styled.div`
+  position: relative;
 
   margin-bottom: 24px;
+
+  & > svg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    transform: translateX(-24px) translateY(-24px);
+  }
+`;
+
+export const SelectStyled = styled.select`
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  width: 100%;
+
+  padding-bottom: 16px;
+  padding-left: 12px;
 
   font-family: "KumbhBold";
   color: #333950;

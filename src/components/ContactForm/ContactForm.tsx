@@ -1,4 +1,4 @@
-import { ChangeEvent } from "react";
+import { ChangeEvent, EventHandler } from "react";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import { ToastContainer, toast } from "react-toastify";
@@ -7,6 +7,7 @@ import * as SC from "./ContactFormStyled";
 
 import { ReactComponent as ErrorIcon } from "../../assets/images/errorIcon.svg";
 import oval_mob from "../../assets/images/contactFormOval.svg"
+import {ReactComponent as ArrowMob} from "../../assets/images/arrow_mob.svg"
 
 const ContactForm: React.FC = () => {
 
@@ -108,17 +109,24 @@ const ContactForm: React.FC = () => {
             </>
           ) : null}
         </SC.InputWrapper>
-        <SC.SelectStyled name="package" onChange={formik.handleChange} value={formik.values.package}>
-          <option value="Basic">
-            Basic Pack <span>Free</span>
-          </option>
-          <option value="Pro">
-            Pro Pack <span>$9.99</span>
-          </option>
-          <option value="Ultimate">
-            Ultimate Pack <span>$19.99</span>
-          </option>
-        </SC.SelectStyled>
+        <SC.SelectWrapper>
+          <SC.SelectStyled
+            name="package"
+            onChange={formik.handleChange}
+            value={formik.values.package}
+          >
+            <option value="Basic">
+              Basic Pack Free
+            </option>
+            <option value="Pro">
+              Pro Pack $9.99
+            </option>
+            <option value="Ultimate">
+              Ultimate Pack $19.99
+            </option>
+          </SC.SelectStyled>
+          <ArrowMob/>
+        </SC.SelectWrapper>
         <SC.InputWrapper>
           <SC.InputStyled
             type="text"
