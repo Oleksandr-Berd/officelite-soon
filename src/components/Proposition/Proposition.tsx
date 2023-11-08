@@ -11,6 +11,8 @@ const Proposition:React.FC = () => {
 
 const isTablet = useMediaQuery("(min-width:768px)")
 
+const isDesktop = useMediaQuery("(min-width:1440px)")
+
     return (
       <>
         {isTablet ? (
@@ -20,7 +22,9 @@ const isTablet = useMediaQuery("(min-width:768px)")
                 <SC.Package>Basic</SC.Package>
                 <SC.Price>Free</SC.Price>
                 <SC.UserProposal>Up to 5 users for free</SC.UserProposal>
-                <ButtonLink location="proposal" color="grey" />
+                {!isDesktop ? (
+                  <ButtonLink location="proposal" color="grey" />
+                ) : null}
               </SC.ContentWrapper>
               <SC.SubList color="white">
                 <SC.SubItem>
@@ -33,13 +37,18 @@ const isTablet = useMediaQuery("(min-width:768px)")
                   <p>Great security and support</p>
                 </SC.SubItem>
               </SC.SubList>
+              {isDesktop ? (
+                <ButtonLink location="proposal" color="grey" />
+              ) : null}
             </SC.Item>
             <SC.Item color="blue" bg={bgTab}>
               <SC.ContentWrapper>
                 <SC.Package>Pro</SC.Package>
                 <SC.Price>$9.99</SC.Price>
                 <SC.UserProposal>All essential integrations</SC.UserProposal>
-                <ButtonLink location="proposal" color="white" />
+                {!isDesktop ? (
+                  <ButtonLink location="proposal" color="grey" />
+                ) : null}
               </SC.ContentWrapper>
               <SC.SubList color="blue">
                 <SC.SubItem>
@@ -52,13 +61,18 @@ const isTablet = useMediaQuery("(min-width:768px)")
                   <p>More control and insights</p>
                 </SC.SubItem>
               </SC.SubList>
+              {isDesktop ? (
+                <ButtonLink location="proposal" color="grey" />
+              ) : null}
             </SC.Item>
             <SC.Item color="white">
               <SC.ContentWrapper>
                 <SC.Package>Ultimate</SC.Package>
                 <SC.Price>$19.99</SC.Price>
                 <SC.UserProposal>Per user, billed monthly</SC.UserProposal>
-                <ButtonLink location="proposal" color="grey" />
+                {!isDesktop ? (
+                  <ButtonLink location="proposal" color="grey" />
+                ) : null}
               </SC.ContentWrapper>
               <SC.SubList color="white">
                 <SC.SubItem>
@@ -71,6 +85,9 @@ const isTablet = useMediaQuery("(min-width:768px)")
                   <p>VIP support</p>
                 </SC.SubItem>
               </SC.SubList>
+              {isDesktop ? (
+                <ButtonLink location="proposal" color="grey" />
+              ) : null}
             </SC.Item>
           </SC.List>
         ) : (

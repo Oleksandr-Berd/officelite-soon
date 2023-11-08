@@ -15,6 +15,13 @@ export const List = styled.ul`
     padding-left: 39px;
     padding-right: 40px;
   }
+
+  @media (min-width: 1440px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const Item = styled.li<StyleProps>`
@@ -29,6 +36,10 @@ export const Item = styled.li<StyleProps>`
 
   &:not(:last-child) {
     margin-bottom: 32px;
+
+    @media (min-width: 1440px) {
+      margin-bottom: 0;
+    }
   }
 
   &:nth-child(1),
@@ -39,11 +50,11 @@ export const Item = styled.li<StyleProps>`
   &:nth-child(2) {
     background-color: #5175ff;
 
-    background-image: url(${props => props.bg});
+    background-image: url(${(props) => props.bg});
     background-repeat: no-repeat;
   }
 
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -54,11 +65,30 @@ export const Item = styled.li<StyleProps>`
     padding-left: 48px;
     padding-right: 48px;
   }
+
+  @media (min-width: 1440px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (min-width: 1440px) {
+    padding-left: 65px;
+    padding-right: 64px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
 `;
 
 export const ContentWrapper = styled.div`
-text-align: left;
-`
+  text-align: left;
+
+  @media (min-width: 1440px) {
+    text-align: center;
+  }
+`;
 
 export const Package = styled.h3`
   margin-bottom: 40px;
@@ -67,8 +97,12 @@ export const Package = styled.h3`
   font-size: 20px;
   line-height: 1.4;
 
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     margin-bottom: 16px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 40px;
   }
 `;
 
@@ -79,8 +113,12 @@ export const Price = styled.h2`
   font-size: 56px;
   line-height: 1.14;
 
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     margin-bottom: 4px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 8px;
   }
 `;
 
@@ -91,8 +129,12 @@ export const UserProposal = styled.p`
   font-size: 16px;
   line-height: 1.75;
 
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     margin-bottom: 24px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 56px;
   }
 `;
 
@@ -103,11 +145,16 @@ export const SubList = styled.ul<StyleProps>`
     color: ${(props) => (props.color === "white" ? "#333950" : "#fff")};
   }
 
-  @media (min-width: 768px){
-margin-bottom: 0;
+  @media (min-width: 768px) {
+    margin-bottom: 0;
 
     text-align: left;
+  }
 
+  @media (min-width: 1440px) {
+    margin-bottom: 32px;
+
+    text-align: center;
   }
 `;
 
