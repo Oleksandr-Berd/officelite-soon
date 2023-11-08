@@ -65,6 +65,8 @@ export const FormStyled = styled.form`
     padding-bottom: 51px;
     padding-left: 43px;
     padding-right: 42px;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 `;
 
@@ -179,4 +181,18 @@ export const SubmitButton = styled.button`
 
   border: none;
   border-radius: 28px;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+
+  @media (min-width: 1440px) {
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color:  #829CFF;
+        
+
+      transition: background-color 0.3s ease-in-out;
+    }
+  }
 `;

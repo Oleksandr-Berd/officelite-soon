@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { CounterProps } from "../../utils/types";
 
 export const HeaderStyled = styled.header`
 padding-top: 50px;
