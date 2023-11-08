@@ -10,7 +10,7 @@ const Header: React.FC = () => {
 const path = location.pathname
 
   return (
-    <SC.HeaderStyled>
+    <SC.HeaderStyled location={path === "/" ? "home" : "sign"}>
       <Logo />
       {path === "/sign" ? <SC.StyleFigure></SC.StyleFigure> : null}
     </SC.HeaderStyled>
