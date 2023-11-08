@@ -3,6 +3,7 @@ import { InputProps, StyleProps } from "../../utils/types";
 
 export const CommonWrapper = styled.div<StyleProps>`
   position: relative;
+  z-index: 5;
 
   padding-bottom: 87px;
   padding-left: 24px;
@@ -10,7 +11,7 @@ export const CommonWrapper = styled.div<StyleProps>`
 
   background: linear-gradient(to bottom, #f2f2f2 50%, #25293a 50%);
 
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     padding-bottom: 126px;
     padding-left: 161px;
     padding-right: 162px;
@@ -22,6 +23,22 @@ export const CommonWrapper = styled.div<StyleProps>`
     left: 0;
 
     content: url(${(props) => props.bg});
+
+    @media (min-width: 1440px) {
+        content: "";
+      top: 0;
+      right: 0;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    padding-bottom: 279px;
+    padding-left: 0;
+    padding-right: 165px;
+
+    background: linear-gradient(to right, #f2f2f2 50%, #25293a 50%);
+
+    border: none;
   }
 `;
 
@@ -40,6 +57,15 @@ export const FormStyled = styled.form`
   background-color: #fff;
 
   border-radius: 13px;
+
+  @media (min-width: 1440px) {
+    width: 445px;
+
+    padding-top: 40px;
+    padding-bottom: 51px;
+    padding-left: 43px;
+    padding-right: 42px;
+  }
 `;
 
 export const InputWrapper = styled.div`

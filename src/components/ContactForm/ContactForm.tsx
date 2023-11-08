@@ -8,12 +8,14 @@ import * as SC from "./ContactFormStyled";
 import { ReactComponent as ErrorIcon } from "../../assets/images/errorIcon.svg";
 import oval_mob from "../../assets/images/contactFormOval.svg"
 import oval_tab from "../../assets/images/oval_tab.svg"
+import oval_desk from "../../assets/images/form_bg_desk.svg"
 import {ReactComponent as ArrowMob} from "../../assets/images/arrow_mob.svg"
 import { useMediaQuery } from "usehooks-ts";
 
 const ContactForm: React.FC = () => {
 
 const isTablet = useMediaQuery("(min-width:768px)")
+const isDesktop = useMediaQuery("(min-width:1440px)")
 
   const validationSchema = Yup.object().shape({
     userName: Yup.string().required("The Name field is empty"),
@@ -78,7 +80,9 @@ const isTablet = useMediaQuery("(min-width:768px)")
   };
 
   return (
-    <SC.CommonWrapper bg={isTablet ? oval_tab : oval_mob}>
+    <SC.CommonWrapper
+      bg={isDesktop ? oval_desk : isTablet ? oval_tab : oval_mob}
+    >
       <ToastContainer />
       <SC.FormStyled onSubmit={handleSubmit}>
         <SC.InputWrapper>
@@ -119,17 +123,11 @@ const isTablet = useMediaQuery("(min-width:768px)")
             onChange={formik.handleChange}
             value={formik.values.package}
           >
-            <option value="Basic">
-              Basic Pack Free
-            </option>
-            <option value="Pro">
-              Pro Pack $9.99
-            </option>
-            <option value="Ultimate">
-              Ultimate Pack $19.99
-            </option>
+            <option value="Basic">Basic Pack Free</option>
+            <option value="Pro">Pro Pack $9.99</option>
+            <option value="Ultimate">Ultimate Pack $19.99</option>
           </SC.SelectStyled>
-          <ArrowMob/>
+          <ArrowMob />
         </SC.SelectWrapper>
         <SC.InputWrapper>
           <SC.InputStyled

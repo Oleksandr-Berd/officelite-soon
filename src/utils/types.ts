@@ -13,7 +13,7 @@ export type LinkButtonProps = {
 }
 
 export type CounterProps = {
-  location: "home" | "sign";
+  location: string;
 };
 
 export type InputProps = {
