@@ -3,6 +3,10 @@ import { CounterProps } from "../../utils/types";
 
 export const CommonWrapper = styled.div`
   text-align: center;
+
+  @media (min-width: 1440px) {
+    text-align: left;
+  }
 `;
 
 export const MainTitle = styled.h3<CounterProps>`
@@ -20,8 +24,12 @@ export const MainTitle = styled.h3<CounterProps>`
     color: #5175ff;
   }
 
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     margin-bottom: 8px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 0;
   }
 `;
 
@@ -53,13 +61,24 @@ export const Item = styled.li<CounterProps>`
 
   &:not(:last-child) {
     margin-right: 13px;
+
+    @media (min-width: 1440px){
+      margin-right: 16px;
+    }
   }
 
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     width: 100px;
 
     padding-top: 29px;
     padding-bottom: 16px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-top: 16px;
+    padding-bottom: 18px;
+
+    text-align: center;
   }
 `;
 
@@ -70,9 +89,9 @@ export const Number = styled.p<CounterProps>`
   font-size: 32px;
   line-height: 1.5;
 
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     font-size: 56px;
-    line-height: 0%.86;
+    line-height: 1.2;
   }
 `;
 
@@ -82,7 +101,7 @@ export const Title = styled.p<CounterProps>`
   font-size: 12px;
   line-height: 2.33;
 
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     font-size: 16px;
     line-height: 1.75;
   }

@@ -14,20 +14,18 @@ export const FooterStyled = styled.footer<StyleProps>`
   background-image: url(${(props) => props.bg});
   background-repeat: no-repeat;
   background-position: bottom;
-`;
 
-export const Title = styled.h3`
-  margin-bottom: 18px;
+  @media (min-width: 1440px){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 
-  text-transform: uppercase;
-
-  font-family: "KumbhBold";
-  color: #fff;
-  font-size: 16px;
-  line-height: 3;
-  letter-spacing: 5px;
-
-  & > span {
-    color: #5175ff;
+    padding-top: 82px;
+    padding-bottom: 91px;
+    padding-left: 165px;
+    padding-right: 165px;
   }
 `;
+
+

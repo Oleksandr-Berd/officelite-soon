@@ -5,6 +5,7 @@ import ButtonLink from "../../ui/ButtonLink/ButtonLink";
 
 import bg from "../../assets/images/item_bg_mob.svg"
 import bgTab from "../../assets/images/item_bg_tab.svg"
+import bgDesk from "../../assets/images/item_bg_desk.svg"
 import { useMediaQuery } from "usehooks-ts";
 
 const Proposition:React.FC = () => {
@@ -41,7 +42,7 @@ const isDesktop = useMediaQuery("(min-width:1440px)")
                 <ButtonLink location="proposal" color="grey" />
               ) : null}
             </SC.Item>
-            <SC.Item color="blue" bg={bgTab}>
+            <SC.Item color="blue" bg={isDesktop ? bgDesk : bgTab}>
               <SC.ContentWrapper>
                 <SC.Package>Pro</SC.Package>
                 <SC.Price>$9.99</SC.Price>
@@ -62,7 +63,7 @@ const isDesktop = useMediaQuery("(min-width:1440px)")
                 </SC.SubItem>
               </SC.SubList>
               {isDesktop ? (
-                <ButtonLink location="proposal" color="grey" />
+                <ButtonLink location="proposal" color="white" />
               ) : null}
             </SC.Item>
             <SC.Item color="white">
