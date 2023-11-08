@@ -6,25 +6,28 @@ export const CommonContainer = styled.div`
 
   text-align: center;
 
-@media (min-width: 768px){
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
-  padding-left: 39px;
-  padding-right: 40px;
-}
+    padding-left: 39px;
+    padding-right: 40px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-left: 165px;
+    padding-right: 165px;
+  }
 `;
 
 export const ContentWrapper = styled.div`
+  margin-right: 36px;
 
-margin-right: 36px;
-
-text-align: left;
-`
+  text-align: left;
+`;
 
 export const Title = styled.h1`
-
   margin-bottom: 24px;
 
   color: #333950;
@@ -32,9 +35,11 @@ export const Title = styled.h1`
   font-size: 40px;
   line-height: 1.2;
 
-
+  @media (min-width: 1440px) {
+    font-size: 56px;
+    line-height: 1.14;
+  }
 `;
-
 
 export const Content = styled.p`
   margin-bottom: 24px;
@@ -44,7 +49,16 @@ export const Content = styled.p`
   font-size: 16px;
   line-height: 1.63;
 
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     width: 345px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 535px;
+
+    margin-bottom: 32px;
+
+    font-size: 18px;
+    line-height: 1.56;
   }
 `;

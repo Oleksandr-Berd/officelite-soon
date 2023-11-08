@@ -2,11 +2,13 @@ import * as SC from "./IntroStyled";
 
 import { ReactComponent as IntroBoard } from "../../assets/images/intro_board.svg";
 import { ReactComponent as IntroBoardTab } from "../../assets/images/boardTab.svg";
+import {ReactComponent as IntroBoardDesk} from "../../assets/images/boardDesk.svg"
 import ButtonLink from "../../ui/ButtonLink/ButtonLink";
 import { useMediaQuery } from "usehooks-ts";
 
 const Intro: React.FC = () => {
   const isTablet = useMediaQuery("(min-width:768px)");
+  const isDesktop = useMediaQuery("(min-width:1440px)")
 
   return (
     <>
@@ -23,7 +25,7 @@ const Intro: React.FC = () => {
             </SC.Content>
             <ButtonLink location="intro" color="blue" />
           </SC.ContentWrapper>
-          <div><IntroBoardTab /></div>
+          <div>{isDesktop ? <IntroBoardDesk/> : <IntroBoardTab />}</div>
         </SC.CommonContainer>
       ) : (
         <SC.CommonContainer>

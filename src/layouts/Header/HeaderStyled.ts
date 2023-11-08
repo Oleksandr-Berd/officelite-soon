@@ -9,4 +9,9 @@ padding-top: 72px;
 padding-bottom: 104px;
 padding-left: 39px;
 }
+
+@media (min-width: 1440px){
+    padding-top: 81px;
+    padding-left: 165px;
+}
 `
